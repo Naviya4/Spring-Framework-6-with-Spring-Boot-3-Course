@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="alien" class="com.navindu.Alien" scope="prototype"> </bean> -->
+
+    <bean id="alien" class="com.navindu.Alien" autowire="byType">
+
+        <property name="age" value="24"></property>
+        <property name="com">
+
+            <bean id="com1" class="com.navindu.Laptop" primary="true">
+            </bean>
+
+        </property>
+
+<!--        <property name="age" value="24"></property>-->
+
+<!--        <constructor-arg type="int" value="24"></constructor-arg>-->
+<!--        <constructor-arg type="com.navindu.Laptop" ref="lap"></constructor-arg>-->
+
+<!--        <property name="lap" ref="lap"></property>-->
+
+<!--        This is the famous way to assign values to a constructor.-->
+<!--        <constructor-arg index="1" value="24"></constructor-arg>-->
+<!--        <constructor-arg index="0" ref="lap"></constructor-arg>-->
+
+<!--        <constructor-arg name="lap" ref="lap"></constructor-arg>-->
+<!--        <constructor-arg name="age" value="24"></constructor-arg>-->
+
+    </bean>
+
+<!--    <bean id="com1" class="com.navindu.Laptop" primary="true">-->
+<!--    </bean>-->
+
+<!--    <bean class="com.navindu.Desktop" lazy-init="true">-->
+<!--    </bean>-->
+
+</beans>
